@@ -87,6 +87,7 @@ body::before {
   top: 0;
   left: 0;
   z-index: 0;
+  min-width: 300px;
 }
 body {
   width: 720px;
@@ -129,9 +130,9 @@ article section {
 h1.title {
   position: absolute;
   top: 0; left: 10px;
-  width: 700px;
   padding-left: 245px;
   text-align: left;
+  white-space: nowrap;
 }
 h1.title span {
   height: 64px;
