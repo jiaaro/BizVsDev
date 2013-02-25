@@ -94,7 +94,7 @@ body {
 }
 .header-container, .main-container, .footer-container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 header, footer, .main {
   margin: 0 10px;
@@ -120,7 +120,7 @@ article section {
 
 .header-container {
   color: #f3f3f3;
-  z-index: 2;
+  z-index: 3;
 }
 .header-container header {
   text-align: right;
@@ -382,6 +382,9 @@ article:first-child {
     visibility: hidden;
 }
 
+.clear {
+  clear: both;
+}
 .clearfix:before,
 .clearfix:after {
     content: " ";
