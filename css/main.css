@@ -13,7 +13,7 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
-    background: #F3F3F3;
+    background: #F3F3F3 url(../img/debut_light.png);
     color: #4A4A4A;
 }
 
@@ -76,18 +76,23 @@ body {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-body::before {
+body::before, body::after {
   content: "";
   display: block;
-  height: 100%;
-  width: 50%;
-  background: #4A4A4A;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 0;
-  min-width: 300px;
+  top: 0; bottom: 0;
+}
+
+body::before {
+  left: 0; right: 0;
+  background: #F3F3F3 url(../img/debut_light.png);
+  
+}
+body::after {
+  left: -120px; width: 50%; 
+  background: #4A4A4A url(../img/debut_dark.png);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.15);
 }
 body {
   width: 720px;
@@ -110,7 +115,6 @@ header, footer, .main {
 .main-container {
   width: 480px;
   float: right;
-  background: #F3F3F3;
 }
 
 
@@ -322,7 +326,6 @@ article:first-child {
   padding: 0 10px 0 20px;
   z-index: 2;
   color: #9b9b9b;
-  background: #f3f3f3;
 }
 
 
