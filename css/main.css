@@ -146,6 +146,7 @@ h1.title span {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 64px;
+  letter-spacing: -3px;
 }
 .title-biz {
   display: block;
