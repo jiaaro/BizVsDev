@@ -1,0 +1,76 @@
+---
+layout: nil
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+<channel>
+
+<title>Biz vs Dev</title>
+
+<link>http://www.bizvsdev.com/</link>
+
+<language>en</language>
+
+<copyright>&#xA9; 2013 James Robert &amp; Mik Pozin</copyright>
+
+<itunes:subtitle>Business, Development, and Business Development</itunes:subtitle>
+
+<itunes:author>Biz vs Dev Podcast</itunes:author>
+
+<itunes:keywords>biz,business,dev,development,bizdev,startups,technology,lean,startup,entrepreneur,entrepreneurship</itunes:keywords>
+
+<itunes:summary>One Hacker. One Business guy. Entirely confrontational. A weekly podcast on the topics of Business, Development, and Business Development.</itunes:summary>
+
+<description>One Hacker. One Business guy. Entirely confrontational. A weekly podcast on the topics of Business, Development, and Business Development.</description>
+
+<itunes:owner>
+  <itunes:name>James Robert</itunes:name>
+  <itunes:email>jiaaro@gmail.com</itunes:email>
+</itunes:owner>
+
+<itunes:image href="http://www.bizvsdev.com/img/itunes.png" />
+
+<itunes:category text="Business">
+  <itunes:category text="Management &amp; Marketing"/>
+</itunes:category>
+
+<itunes:category text="Business"/>
+
+<itunes:category text="Technology"/>
+
+<itunes:category text="Technology">
+  <itunes:category text="Software How-To"/>
+</itunes:category>
+
+<itunes:new-feed-url>http://www.bizvsdev.com/podcast.xml</itunes:new-feed-url>
+
+{% for post in site.posts limit:10 %} 
+  <item>
+    <title>{{ post.title }}</title>
+
+    <itunes:author>Biz vs Dev Podcast</itunes:author>
+
+    <itunes:subtitle>Biz vs Dev: {{ post.title }}</itunes:subtitle>
+
+    <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+
+    <itunes:image href="http://www.bizvsdev.com/img/itunes.png" />
+
+    <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/x-m4a" />
+
+    <guid>{{ post.link }}</guid>
+
+    <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }} GMT</pubDate>
+
+    <itunes:duration>{{ post.duration }}</itunes:duration>
+
+    <itunes:keywords>biz,business,dev,development,bizdev,startups,technology,lean,startup,entrepreneur,entrepreneurship</itunes:keywords> 
+  </item>
+{% endfor %}
+
+</channel>
+
+</rss>

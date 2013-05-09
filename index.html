@@ -3,22 +3,20 @@ layout: default
 title: Biz vs Dev Podcast
 ---
 
-{% for i in (1..5) %}
+{% for post in site.posts %}
   <article>
       <header>
-          <time datetime="2013-02-25">February 25, 2013</time>
-          <h1>Ep 3. A Brave New World</h1>
+          <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <h1>{{ post.title }}</h1>
       </header>
       <section>
-          <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F57066022&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false&amp;show_playcount=false&amp;show_comments=false"></param><param name="allowscriptaccess" value="always"></param><embed allowscriptaccess="always" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F57066022&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false&amp;show_playcount=false&amp;show_comments=false" type="application/x-shockwave-flash" width="100%" height="81"></embed></object>                        
+          <iframe style="background: #fff;" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{{ post.soundcloud }}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false">          <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{{ post.soundcloud }}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false&amp;show_playcount=false&amp;show_comments=false"></param><param name="allowscriptaccess" value="always"></param><embed allowscriptaccess="always" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F{{ post.soundcloud }}&amp;color=ff6600&amp;auto_play=false&amp;show_artwork=false&amp;show_playcount=false&amp;show_comments=false" type="application/x-shockwave-flash" width="100%" height="81"></embed></object></iframe>
       </section>
       <footer>
           <div class="sharebar">
-            <strong>Share this:</strong> 
-            <a href="#">twitter</a>
-            <a href="#">facebook</a>
-            <a href="#">linkedin</a>
-            <a href="#">email</a>
+            <strong>Share this:</strong>
+            <a data-network="twitter" data-title="{{ post.title | uri_escape }}" href="http://twitter.com/home?status={{ post.title | cgi_escape }} {{ site.url | cgi_escape }}{{ post.url | cgi_escape }} @bizvsdev" target="_blank">tweet</a>
+            <a data-network="email" data-title="{{ post.title | uri_escape }}"href="mailto:?subject={{ post.title | uri_escape }} ({{ site.name | cgi_escape }})&body=%0a%0a%0a%0a%0a{{ post.title | uri_escape }}%0a{{ site.url | cgi_escape }}{{ post.url | cgi_escape }}">email</a>
           </div>
       </footer>
   </article>
