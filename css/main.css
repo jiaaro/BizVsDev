@@ -197,7 +197,10 @@ h1.title span {
   font-size: 16px;
   color: #9B9B9B;
 }
-.header-container button {
+.header-container .subscribe-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
   height: 42px;
   line-height: 42px;
   
@@ -230,7 +233,7 @@ h1.title span {
                       0px 1px 0px 0 rgba(255,255,255,0.25);
 
 }
-.header-container button:hover {
+.header-container .subscribe-btn:hover {
   line-height: 40px;
   
   background-image: -o-linear-gradient(#FFB969 0%, #FF5300 100%);
@@ -251,7 +254,7 @@ h1.title span {
                       inset 0px 1px 0 rgba(255,255,255,0.25),
                       1px 4px 3px 0 rgba(0,0,0,0.25);
 }
-.header-container button:active {
+.header-container .subscribe-btn:active {
   line-height: 44px;
   background-image: -o-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: -moz-linear-gradient(#FFAE52 0%, #CC4200 100%);
@@ -271,7 +274,11 @@ h1.title span {
                       inset 0px 2px 2px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.35);
 }
-
+.header-container .rss-subscribe,
+.header-container .rss-subscribe a {
+  font-size: 14px;
+  color: #9B9B9B;
+}
 
 
 .main {
