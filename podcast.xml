@@ -10,7 +10,7 @@ layout: nil
 
 <title>Biz vs Dev</title>
 
-<link>http://www.bizvsdev.com/</link>
+<link>{{ site.url }}</link>
 
 <language>en</language>
 
@@ -31,7 +31,7 @@ layout: nil
   <itunes:email>jiaaro@gmail.com</itunes:email>
 </itunes:owner>
 
-<itunes:image href="http://www.bizvsdev.com/img/itunes.png" />
+<itunes:image href="{{ site.url }}/img/itunes.png" />
 
 <itunes:category text="Business">
   <itunes:category text="Management &amp; Marketing"/>
@@ -45,11 +45,12 @@ layout: nil
   <itunes:category text="Software How-To"/>
 </itunes:category>
 
-<itunes:new-feed-url>http://www.bizvsdev.com/podcast.xml</itunes:new-feed-url>
+<itunes:new-feed-url>{{ site.url }}/podcast.xml</itunes:new-feed-url>
 
 {% for post in site.posts limit:10 %} 
   <item>
     <title>{{ post.title }}</title>
+    <description>{{ post.content | xml_escape }}</description>
 
     <itunes:author>Biz vs Dev Podcast</itunes:author>
 
@@ -57,11 +58,13 @@ layout: nil
 
     <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
 
-    <itunes:image href="http://www.bizvsdev.com/img/itunes.png" />
+    <itunes:image href="{{ site.url }}/img/itunes.png" />
 
     <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/x-m4a" />
 
     <guid>{{ post.link }}</guid>
+    
+    <link>{{ site.url }}{{ post.url }}</link>
 
     <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }} GMT</pubDate>
 
