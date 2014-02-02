@@ -87,10 +87,10 @@ body::before, body::after {
 body::before {
   left: 0; right: 0;
   background: #F3F3F3 url(../img/debut_light.png);
-  
+
 }
 body::after {
-  left: -120px; width: 50%; 
+  left: -120px; width: 50%;
   background: #4A4A4A url(../img/debut_dark.png);
   box-shadow: 2px 0 5px rgba(0,0,0,0.15);
 }
@@ -203,31 +203,31 @@ h1.title span {
   text-decoration: none;
   height: 42px;
   line-height: 42px;
-  
+
   width: 100%;
   border: none;
 
   font-size: 16px;
   color: #ffffff;
   font-weight: bold;
-  
+
   text-shadow: 0px -1px 0px rgba(0,0,0,0.60);
   border-radius: 6px;
-  
+
   background-image: -o-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: -moz-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: -webkit-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: -ms-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: linear-gradient(#FFAE52 0%, #CC4200 100%);
-  
+
   -moz-box-shadow:    inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 1px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.25);
-                      
+
   -webkit-box-shadow: inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 1px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.25);
-  
+
   box-shadow:         inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 1px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.25);
@@ -235,21 +235,21 @@ h1.title span {
 }
 .header-container .subscribe-btn:hover {
   line-height: 40px;
-  
+
   background-image: -o-linear-gradient(#FFB969 0%, #FF5300 100%);
   background-image: -moz-linear-gradient(#FFB969 0%, #FF5300 100%);
   background-image: -webkit-linear-gradient(#FFB969 0%, #FF5300 100%);
   background-image: -ms-linear-gradient(#FFB969 0%, #FF5300 100%);
   background-image: linear-gradient(#FFB969 0%, #FF5300 100%);
-  
+
   -moz-box-shadow:    inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 0 rgba(255,255,255,0.25),
                       1px 4px 3px 0 rgba(0,0,0,0.25);
-                      
+
   -webkit-box-shadow: inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 0 rgba(255,255,255,0.25),
                       1px 4px 3px 0 rgba(0,0,0,0.25);
-  
+
   box-shadow:         inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 1px 0 rgba(255,255,255,0.25),
                       1px 4px 3px 0 rgba(0,0,0,0.25);
@@ -261,15 +261,15 @@ h1.title span {
   background-image: -webkit-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: -ms-linear-gradient(#FFAE52 0%, #CC4200 100%);
   background-image: linear-gradient(#FFAE52 0%, #CC4200 100%);
-  
+
   -moz-box-shadow:    inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 2px 2px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.35);
-                      
+
   -webkit-box-shadow: inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 2px 2px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.35);
-  
+
   box-shadow:         inset 0px -1px 0px 0 rgba(0,0,0,0.50),
                       inset 0px 2px 2px 0 rgba(0,0,0,0.80),
                       0px 1px 0px 0 rgba(255,255,255,0.35);
@@ -302,8 +302,12 @@ article:first-child {
   font-size: 32px;
   line-height: 32px;
 }
+.main h1 a {
+  color: inherit;
+  text-decoration: none;
+}
 .sharebar {
-  
+
 }
 
 .footer-left {
@@ -317,7 +321,7 @@ article:first-child {
 .footer-left ul,
 .footer-left li {
   list-style: none;
-  padding: 0; margin: 0; 
+  padding: 0; margin: 0;
   line-height: 18px;
 }
 .footer-left a {
@@ -343,7 +347,7 @@ article:first-child {
    ========================================================================== */
 
 @media only screen and (max-width: 768px) {
-  
+
 }
 
 
