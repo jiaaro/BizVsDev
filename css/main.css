@@ -102,6 +102,10 @@ body {
   position: relative;
   z-index: 2;
 }
+/* hack to stop these elements from disappearing in safari */
+.header-container, .footer-container {
+   -webkit-transform: translate3d(0,0,0);
+}
 header, footer, .main {
   margin: 0 10px;
 }
