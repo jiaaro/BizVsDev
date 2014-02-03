@@ -138,6 +138,10 @@ h1.title {
   text-align: left;
   white-space: nowrap;
 }
+h1.title a {
+  color: inherit;
+  text-decoration: none;
+}
 h1.title span {
   height: 64px;
   line-height: 64px;
