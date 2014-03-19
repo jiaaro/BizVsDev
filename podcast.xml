@@ -33,21 +33,15 @@ layout: nil
 
 <itunes:image href="{{ site.url }}/img/itunes.png" />
 
-<itunes:category text="Business">
-  <itunes:category text="Management &amp; Marketing"/>
-</itunes:category>
-
-<itunes:category text="Business"/>
-
 <itunes:category text="Technology"/>
-
+<itunes:category text="Business"/>
 <itunes:category text="Technology">
-  <itunes:category text="Software How-To"/>
+  <itunes:category text="Tech News"/>
 </itunes:category>
 
 <itunes:new-feed-url>{{ site.url }}/podcast.xml</itunes:new-feed-url>
 
-{% for post in site.posts limit:10 %} 
+{% for post in site.posts limit:10 %}
   <item>
     <title>{{ post.title }}</title>
     <description>{{ post.content | xml_escape }}</description>
@@ -63,14 +57,14 @@ layout: nil
     <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/x-m4a" />
 
     <guid>{{ post.link }}</guid>
-    
+
     <link>{{ site.url }}{{ post.url }}</link>
 
     <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S" }} GMT</pubDate>
 
     <itunes:duration>{{ post.duration }}</itunes:duration>
 
-    <itunes:keywords>biz,business,dev,development,bizdev,startups,technology,lean,startup,entrepreneur,entrepreneurship</itunes:keywords> 
+    <itunes:keywords>biz,business,dev,development,bizdev,startups,technology,lean,startup,entrepreneur,entrepreneurship</itunes:keywords>
   </item>
 {% endfor %}
 
