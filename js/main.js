@@ -3,10 +3,21 @@ $(function() {
 
   $(".subscribe-btn").click(function() {
     track_subscribe('itunes');
+    defer_click(this);
+    return false;
   });
   $(".rss-subscribe").click(function() {
     track_subscribe('rss');
+    defer_click(this);
+    return false;
   });
+
+  function defer_click(elem) {
+    var destination = $(elem).attr("href");
+    setTimeout(function() {
+      location.href = destination;
+    }, 150);
+  }
 
   function track_subscribe(sub_type) {
     ga('send', 'event', 'Subscribe button', 'click', sub_type);
