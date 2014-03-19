@@ -13,10 +13,12 @@ $(function() {
   });
 
   function defer_click(elem) {
-    var destination = $(elem).attr("href").text("Woo hoo!");
+    var destination = $(elem).attr("href");
+    $(".subscribe-btn, .rss-subscribe").text("Woo hoo!");
+
     setTimeout(function() {
       location.href = destination;
-    }, 250);
+    }, 500);
   }
 
   function track_subscribe(sub_type) {
