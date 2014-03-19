@@ -13,10 +13,10 @@ $(function() {
   });
 
   function defer_click(elem) {
-    var destination = $(elem).attr("href");
+    var destination = $(elem).attr("href").text("Woo hoo!");
     setTimeout(function() {
       location.href = destination;
-    }, 150);
+    }, 250);
   }
 
   function track_subscribe(sub_type) {
@@ -30,7 +30,6 @@ $(function() {
 
     (function(){
       var fpw = document.createElement('script');
-      fpw.async = true;
       fpw.src = '//connect.facebook.net/en_US/fp.js';
       var ref = document.getElementsByTagName('script')[0];
       ref.parentNode.insertBefore(fpw, ref);
