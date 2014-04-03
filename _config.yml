@@ -2,3 +2,4 @@ name: Biz vs Dev
 description: Business, Development, and Business Development
 url: http://www.bizvsdev.com
 permalink: /:title
+markdown: kramdown
