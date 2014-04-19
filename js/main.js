@@ -2,13 +2,11 @@ $(function() {
   $(".show-notes a").attr("target", "_blank");
 
   $(".subscribe-btn").click(function() {
-    track_subscribe('itunes');
-    defer_click(this);
+    track_subscribe('itunes', defer_click(this));
     return false;
   });
   $(".rss-subscribe").click(function() {
-    track_subscribe('rss');
-    defer_click(this);
+    track_subscribe('rss', defer_click(this));
     return false;
   });
 
@@ -16,13 +14,15 @@ $(function() {
     var destination = $(elem).attr("href");
     $(".subscribe-btn, .rss-subscribe").text("Woo hoo!");
 
-    setTimeout(function() {
+    return function() {
       location.href = destination;
-    }, 500);
+    }
   }
 
-  function track_subscribe(sub_type) {
-    ga('send', 'event', 'Subscribe button', 'click', sub_type);
+  function track_subscribe(sub_type, cb) {
+    ga('send', 'event', 'Subscribe button', 'click', sub_type, {
+      hitCallback: cb
+    });
 
     // FACEBOOK PORTION:
     var fb_param = window.fb_param = {};
