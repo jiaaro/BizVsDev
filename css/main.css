@@ -309,6 +309,7 @@ article:first-child {
   margin: 0 0 15px;
   font-size: 32px;
   line-height: 32px;
+  letter-spacing: -1px;
 }
 .main h1 a {
   color: inherit;
@@ -424,6 +425,8 @@ article:first-child {
     *zoom: 1;
 }
 
+
+
 /* ==========================================================================
    Print styles
    ========================================================================== */
@@ -493,4 +496,29 @@ article:first-child {
     h3 {
         page-break-after: avoid;
     }
+}
+
+.archive-article-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.archive-article-list li {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+.archive-article-list h1 {
+  font-size: 26px;
+  letter-spacing: -1px;
+  line-height: 1em;
+}
+.goto-archive {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 5px 0;
+  border: 1px solid rgba(0,0,0, 0.2);
+  border-left: none;
+  border-right: none;
 }

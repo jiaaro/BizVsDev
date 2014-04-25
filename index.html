@@ -3,7 +3,9 @@ layout: default
 title: Biz vs Dev Podcast
 ---
 
-{% for post in site.posts %}
+{% for post in site.posts limit: 5 %}
     {% assign content = post.content %}
     {% include post_content.html %}
 {% endfor %}
+
+<a class="goto-archive" href="/archive.html">See More Posts in the Archive &rarr;</a>

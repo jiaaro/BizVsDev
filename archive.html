@@ -1,0 +1,12 @@
+---
+layout: default
+title: Archive | Biz vs Dev Podcast
+---
+<ul class="archive-article-list">
+  {% for post in site.posts %}
+    <li>
+      <time>{{ post.date | date: "%B %d, %Y" }}</time>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    </li>
+  {% endfor %}
+</ul>
