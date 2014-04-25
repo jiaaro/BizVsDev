@@ -91,6 +91,7 @@ body::before {
 }
 body::after {
   left: -120px; width: 50%;
+  min-width: 360px;
   background: #4A4A4A url(../img/debut_dark.png);
   box-shadow: 2px 0 5px rgba(0,0,0,0.15);
 }
