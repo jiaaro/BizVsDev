@@ -5,7 +5,7 @@ $(function() {
     track_subscribe('itunes', defer_click(this));
     return false;
   });
-  $(".rss-subscribe").click(function() {
+  $(".rss-link").click(function() {
     track_subscribe('rss', defer_click(this));
     return false;
   });
