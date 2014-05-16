@@ -44,17 +44,18 @@ layout: nil
 {% for post in site.posts limit:10 %}
   <item>
     <title>{{ post.title }}</title>
-    <description>{{ post.content | xml_escape }}</description>
+    
+    <description><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></description>
 
     <itunes:author>Biz vs Dev Podcast</itunes:author>
 
-    <itunes:subtitle>Biz vs Dev: {{ post.title }}</itunes:subtitle>
+    <itunes:subtitle>{{ post.title | xml_escape }}</itunes:subtitle>
 
-    <itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+    <itunes:summary><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></itunes:summary>
 
     <itunes:image href="{{ site.url }}/img/itunes.png" />
 
-    <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/x-m4a" />
+    <enclosure url="{{ post.link }}" length="{{ post.length }}" type="audio/{% if post.link | endswith: "mp3" %}mpeg{% else %}x-m4a{% endif %}" />
 
     <guid>{{ post.link }}</guid>
 
